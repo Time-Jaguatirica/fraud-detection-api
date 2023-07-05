@@ -8,6 +8,10 @@ dataframe = DataFrame()
 def home():
     return render_template("index.html")
 
+@app.route("/heatmap")
+def heatmap():
+    return render_template("heatmap.html")
+
 @app.route("/features")
 def get_features():
     return dataframe.get_features()
