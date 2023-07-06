@@ -1,8 +1,8 @@
 from flask import Flask, render_template
-from .services import DataFrame
+from .services import KNNClassificator
 
 app = Flask(__name__)
-dataframe = DataFrame()
+classificator = KNNClassificator()
 
 @app.route("/")
 def home():
@@ -14,7 +14,7 @@ def heatmap():
 
 @app.route("/features")
 def get_features():
-    return dataframe.get_features()
+    return classificator.get_features()
 
 if __name__ == "__main__":
     app.run(debug=True)
