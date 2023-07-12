@@ -1,20 +1,11 @@
-from flask import Flask, render_template
-from .services import KNNClassificator
+from dash import Dash, html
+import dash
 
-app = Flask(__name__)
-classificator = KNNClassificator()
+app = Dash(__name__, use_pages=True)
 
-@app.route("/")
-def home():
-    return render_template("index.html")
+app.layout = html.Div([
+	dash.page_container
+])
 
-@app.route("/heatmap")
-def heatmap():
-    return render_template("heatmap.html")
-
-@app.route("/features")
-def get_features():
-    return classificator.get_features()
-
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+	app.run(debug=True)
