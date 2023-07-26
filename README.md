@@ -11,9 +11,16 @@ python3 -m pip install -r requirements.txt
 
 
 ### Como rodar localmente
-- Iniciar Dash API
+- Criar um arquivo *.env* similar ao *.env.example*.
+
+- Utilizando servidor local:
 ```bash
-python3 src/app.py
+gunicorn app:server --bind 0.0.0.0:8000
+```
+
+- Utilizando docker compose:
+```bash
+docker compose up
 ```
 
 
