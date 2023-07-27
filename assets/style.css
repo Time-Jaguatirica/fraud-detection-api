@@ -1,6 +1,6 @@
 body {
     background-color: #363636;
-    color: white;
+    color: #FFFFFF;
     font-family: 'Ubuntu';
 }
 
@@ -11,5 +11,15 @@ body {
 }
 
 #live-table {
-    color: black;
+    color: #000000;
+}
+
+#filter-table {
+    color: #000000;
+}
+
+.text-box {
+  background-color: #000000;
+  padding: 20px;
+  opacity: 0.3;
 }

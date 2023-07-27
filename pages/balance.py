@@ -5,7 +5,7 @@ from dash import html, dcc, callback, Input, Output
 import plotly.express as px
 
 
-dash.register_page(__name__, path='/')
+dash.register_page(__name__, path='/balance')
 
 s3_manager = S3Manager()
 df = s3_manager.load_dataframe()
