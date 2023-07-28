@@ -7,7 +7,7 @@ import plotly.express as px
 import pandas as pd
 
 
-dash.register_page(__name__, path='/')
+dash.register_page(__name__, path='/simulate-transaction')
 
 s3_manager = S3Manager()
 df = s3_manager.load_dataframe()
@@ -18,9 +18,9 @@ feature_graph = px.bar(feature_importances)
 
 features = ['Time', 'Amount', 'V2', 'V4', 'V11', 'V10', 'V12', 'V14']
 
-layout = html.Div(className='simulate-transaction-page',
+layout = html.Div(className='single-page',
     children=[
-    html.H1(children='Aplicação Prática', style={"text-align": "center"}),
+    html.H1(children='Aplicação Prática'),
 
     html.Div(className='text-box', children=[
         html.P(children='Simulação de insights sendo gerados em tempo real pelo algoritmo Random Forest para classificar as transações em seu négocio, podendo captar padrões e identificar fraudes imediatamente.'),
@@ -29,7 +29,7 @@ layout = html.Div(className='simulate-transaction-page',
     html.H3(children='Features de maior relevância para o algoritmo'),
     dcc.Graph(id='feature-graph', figure=feature_graph),
 
-    html.H3(children='Transações em tempo real:'),
+    html.H3(children='Transações em tempo real'),
     dash_table.DataTable(id='live-table'),
     dcc.Interval(id='refresh', interval=10000, n_intervals=0),
 

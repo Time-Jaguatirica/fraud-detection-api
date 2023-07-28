@@ -1,4 +1,6 @@
+from components import custom_nav
 from dash import Dash, html
+import dash_bootstrap_components as dbc
 import dash
 
 
@@ -12,12 +14,13 @@ external_stylesheets = [
     },
 ]
 
-app = Dash(__name__, use_pages=True, external_stylesheets=external_stylesheets)
+app = Dash(__name__, use_pages=True, external_stylesheets=[external_stylesheets])
 
 server = app.server
 
 app.layout = html.Div([
-	dash.page_container
+	dash.page_container,
+    custom_nav
 ])
 
 if __name__ == '__main__':

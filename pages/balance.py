@@ -19,7 +19,8 @@ X_smote, y_smote = smote_sampler.get_xy()
 smote_df = y_smote.value_counts()
 pie_graph_smote = px.pie(smote_df, values=smote_df, names=['Normal', 'Fraude'], title='Após a aplicação da técnica SMOTE')
 
-layout = html.Div(children=[
+layout = html.Div(className='single-page',
+    children=[
     html.H1(children='Técnicas de balanceamento dos dados'),
 
     html.Div(children='''
