@@ -13,4 +13,4 @@ class S3Manager():
         return pickle.loads(s3.get_object(Bucket='fraud-detection-models', Key='creditcard-dataframe.pkl').get('Body').read())
 
     def load_model(self):
-        return pickle.loads(s3.get_object(Bucket='fraud-detection-models', Key='smote-3nn-model.pkl').get('Body').read())
+        return pickle.loads(s3.get_object(Bucket='fraud-detection-models', Key='random-forest-model.pkl').get('Body').read())
