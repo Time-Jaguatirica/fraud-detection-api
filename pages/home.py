@@ -41,9 +41,9 @@ layout = html.Div(className='single-page', children=[
     html.Div(className='text-box', children=[
         html.P(children='O modelo Random Forest é um algoritmo de aprendizado de máquina White Box (Modelo Explicativo) que combina várias árvores de decisão para fazer previsões mais precisas. Cada árvore é treinada em uma amostra aleatória dos dados e usa apenas algumas variáveis. Depois, as previsões das árvores são combinadas por votação (classificação) ou média (regressão) para obter o resultado final. O Random Forest é conhecido por ser robusto e evitar overfitting.'),
 
-        html.Img(src='', alt='Exemplo da árvore gerada pelo algoritmo.'),
+        html.Img(src='assets/tree-example.png', alt='Exemplo da árvore gerada pelo algoritmo.', style={"width": "790px", "margin-bottom": "1rem"}),
 
-        html.Img(src='', alt='Exemplo da métrica de precisão.'),
+        html.Img(src='assets/metrics.png', alt='Exemplo da métrica de precisão.'),
     ]),
     footer,
 ])
