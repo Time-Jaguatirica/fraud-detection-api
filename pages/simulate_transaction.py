@@ -5,7 +5,7 @@ from dash import html, dcc, callback, Input, Output, dash_table
 from random import randint
 import plotly.express as px
 import pandas as pd
-
+from components import footer
 
 dash.register_page(__name__, path='/simulate-transaction')
 
@@ -39,9 +39,9 @@ layout = html.Div(className='single-page',
     dcc.RadioItems(options=['Legítima', 'Fraude'], value='Legítima', id='controls-and-radio-item'),
     dash_table.DataTable(id='filter-table'),
 
-    dcc.Store(id='subset')
+    dcc.Store(id='subset'),
+    footer
 ])
-
 
 @callback(Output('subset', 'data'),
           Input('refresh', 'n_intervals'))

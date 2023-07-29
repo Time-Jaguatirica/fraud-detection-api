@@ -1,4 +1,5 @@
 import dash
+from components import footer
 from dash import html, dcc
 from services import S3Manager, SmoteSampler
 import plotly.express as px
@@ -44,4 +45,5 @@ layout = html.Div(className='single-page', children=[
 
         html.Img(src='', alt='Exemplo da métrica de precisão.'),
     ]),
+    footer,
 ])

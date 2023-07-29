@@ -1,4 +1,4 @@
-from components import custom_nav, footer
+from components import custom_nav
 from dash import Dash, html
 import dash_bootstrap_components as dbc
 import dash
@@ -21,7 +21,6 @@ server = app.server
 app.layout = html.Div([
     custom_nav,
 	dash.page_container,
-    footer,
 ])
 
 if __name__ == '__main__':
